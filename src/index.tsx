@@ -9,8 +9,10 @@ import App from './App';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
+import custom from './reducers/custom';
+
 const repository = new Repository({
-  repositoryUrl: 'https://mysensenetsite.com'
+  repositoryUrl: 'http://sn_react'
 });
 
 const jwtService = new JwtService(repository);
@@ -18,7 +20,9 @@ jwtService.checkForUpdate();
 
 const sensenet = Reducers.sensenet;
 const myReducer = combineReducers({
-  sensenet
+  // new added reducer
+  custom,
+  sensenet,
 });
 
 const storeOptions = {
