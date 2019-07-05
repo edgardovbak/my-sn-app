@@ -4,7 +4,7 @@ class Main extends React.Component {
   public render() {
     return (
         <p className="App-intro">
-          test
+          Sn react app
         </p>
     );
   }
